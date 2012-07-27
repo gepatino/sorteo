@@ -1,16 +1,16 @@
-quienes = ['Leonardo', 'Pablo', 'Gustavo', 'Gabriel']
-max_score = 3
+quienes = ['Alfredo', 'Leonardo', 'Pablo', 'Gustavo', 'Gabriel']
+max_score = 5
 
 import random
 import time
 
-random.shuffle(quienes)
 resultados = {}
 winner = None
 
 print 'Gana el que llegue a %d' % max_score
 time.sleep(2)
 while winner is None:
+    random.shuffle(quienes)
     c = random.choice(quienes)
     if c not in resultados:
         resultados[c] = 0
